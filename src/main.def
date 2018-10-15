@@ -1,0 +1,4 @@
+LIBRARY   mayaCpp  
+EXPORTS
+initializePlugin
+uninitializePlugin
