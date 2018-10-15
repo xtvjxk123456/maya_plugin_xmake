@@ -5,7 +5,7 @@
 -- add target
 target("mayaCpp")
     set_languages("cxx11")
-    set_symbols("debug")
+    -- set_symbols("debug")
     
     set_kind("shared")
     add_files("src/*.cpp") 
