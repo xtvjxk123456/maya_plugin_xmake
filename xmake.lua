@@ -32,13 +32,13 @@ target("mayaCpp")
     -- add_shflags("/DEF:src/main.def", {force = true})
     add_shflags("/export:initializePlugin /export:uninitializePlugin",{force=true})
     -- 要用强制导出
-    after_build(
-        function(target)
-            local targetFile = target:targetfile()
-            os.mv(targetFile,path.join(path.directory(targetFile),format("%s.%s",path.basename(targetFile),"mll")))
-        end
-    )
-
+    -- after_build(
+    --     function(target)
+    --         local targetFile = target:targetfile()
+    --         os.mv(targetFile,path.join(path.directory(targetFile),format("%s.%s",path.basename(targetFile),"mll")))
+    --     end
+    -- )
+    set_filename("mayaCpp.mll")
 
 
 --
